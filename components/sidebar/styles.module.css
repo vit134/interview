@@ -1,0 +1,10 @@
+.sidebar {
+    position: sticky;
+    top: 0;
+    background: #fff;
+}
+
+.menu {
+    height: 100%;
+    border-radius: 0;
+}

@@ -1,0 +1,5 @@
+{
+  "extends": [
+    "@avito/eslint-config-alternative"
+  ]
+}
