@@ -231,7 +231,7 @@
         "name": "Мужской"
       },
       "age": 24,
-      "title": "Менеджер по продажам",
+      ""title"": "Менеджер по продажам",
       "experience": [
         {
           "industries": [
@@ -297,5 +297,102 @@
       "created_at": "2015-11-16T10:29:22+0300"
     },
     "id": 3
+  },
+  "questions": {
+    "types": [
+        {
+            "id": 1,
+            "name": "Общие вопросы"
+        },
+        {
+            "id": 2,
+            "name": "Java Script"
+        },
+        {
+            "id": 3,
+            "name": "CSS"
+        },
+        {
+            "id": 4,
+            "name": "React"
+        }
+    ],
+    "questions": [
+        {
+            "typeId": 1,
+            "title": "В чем разница между null и undefined?",
+            "href": "https://habr.com/ru/post/486820/#1"
+        },
+        {
+            "typeId": 1,
+            "title": "Для чего используется оператор \"&&\"?",
+            "href": "https://habr.com/ru/post/486820/#2"
+        },
+        {
+            "typeId": 2,
+            "title": "Для чего используется оператор \"||\"?",
+            "href": "https://habr.com/ru/post/486820/#3"
+        },
+        {
+            "typeId": 2,
+            "title": "Является ли использование унарного плюса (оператор \"+\") самым быстрым способом преобразования строки в число?",
+            "href": "https://habr.com/ru/post/486820/#4"
+        },
+        {
+            "typeId": 3,
+            "title": "Что такое DOM?",
+            "href": "https://habr.com/ru/post/486820/#5"
+        },
+        {
+            "typeId": 4,
+            "title": "Что такое распространение события (Event Propogation)?",
+            "href": "https://habr.com/ru/post/486820/#6"
+        },
+        {
+            "typeId": 4,
+            "title": "Что такое всплытие события (Event Bubbling)?",
+            "href": "https://habr.com/ru/post/486820/#7"
+        },
+        {
+            "typeId": 3,
+            "title": "Что такое погружение события (Event Capturing)?",
+            "href": "https://habr.com/ru/post/486820/#8"
+          },
+          {
+            "typeId": 4,
+            "title": "В чем разница между методами event.preventDefault() и event.stopPropagation()?",
+            "href": "https://habr.com/ru/post/486820/#9"
+          },
+          {
+            "typeId": 2,
+            "title": "Как узнать об использовании метода event.preventDefault()?",
+            "href": "https://habr.com/ru/post/486820/#10"
+          },
+          {
+            "typeId": 4,
+            "title": "Почему obj.someprop.x приводит к ошибке?",
+            "href": "https://habr.com/ru/post/486820/#11"
+          },
+          {
+            "typeId": 2,
+            "title": "Что такое цель события или целевой элемент (event.target)?",
+            "href": "https://habr.com/ru/post/486820/#12"
+          },
+          {
+            "typeId": 2,
+            "title": "Что такое текущая цель события (event.currentTarget)?",
+            "href": "https://habr.com/ru/post/486820/#13"
+          },
+          {
+            "typeId": 3,
+            "title": "В чем разница между операторами \"==\" и \"===\"?",
+            "href": "https://habr.com/ru/post/486820/#14"
+          },
+          {
+            "typeId": 4,
+            "title": "Почему результатом сравнения двух похожих объектов является false?",
+            "href": "https://habr.com/ru/post/486820/#15"
+          }
+    ]
   }
 }
