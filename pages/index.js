@@ -1,51 +1,53 @@
-import React from 'react'
-import Head from 'next/head'
-import { Header } from '../components/header';
-import { PageHeader } from '../components/page-header';
-import { QuestionnaireField } from '../components/questionnaire-field';
-import { Sidebar } from '../components/sidebar';
-import { makeQuestionsAndAnswers } from './questions.mock';
+import React from 'react';
+import Head from 'next/head';
+import { Layout } from 'antd';
+import { Header } from '../src/components/header';
+import { PageHeader } from '../src/components/page-header';
+import { QuestionsContent } from '../src/containers/questions-content';
+import { Sidebar } from '../src/modules/sidebar';
+import { getQuestions } from '../src/domains/questions/operations';
 
-import { Layout, Menu, Icon } from 'antd';
 
 import styles from './styles.module.css';
 
-const { SubMenu } = Menu;
-const { Content, Sider } = Layout;
-
 const candidateInfo = {
-    name: 'Кандидат Кандидатович'
-}
+  name: 'Кандидат Кандидатович',
+};
 
+const Home = (props) => {
+    console.log(props);
+    return (
+        <div>
+          <Head>
+            <title>Homae</title>
+            <link rel="icon" href="/favicon.ico" />
+          </Head>
 
-const questions = makeQuestionsAndAnswers();
-
-console.log(questions[0])
-const Home = () => (
-  <div>
-    <Head>
-      <title>Home</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
-
-    <Layout>
-        <Header />
-        <Layout>
-            <div className={styles.sidebar}>
+          <Layout>
+            <Header />
+            <Layout>
+              <div className={styles.sidebar}>
                 <Sidebar />
-            </div>
-            <Layout className={styles.content}>
+              </div>
+              <Layout className={styles.content}>
                 <PageHeader info={candidateInfo} />
-                <Content className={styles['content-inner']}>
-                    <h2>Вопросы</h2>
-                    {
-                        questions.map((question, index) => <QuestionnaireField {...question} index={index + 1} />)
-                    }
-                </Content>
+                <QuestionsContent />
+              </Layout>
             </Layout>
-        </Layout>
-    </Layout>
-  </div>
-)
+          </Layout>
+        </div>
+      );
+};
 
-export default Home
+Home.getInitialProps = async ({ store }) => {
+  try {
+    await store.dispatch(getQuestions());
+  } catch (e) {
+    console.log(e);
+  }
+
+  return {};
+};
+
+
+export default Home;

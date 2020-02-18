@@ -1,0 +1,12 @@
+.content {
+    padding: 12px 12px;
+    background: #fff;
+}
+
+.content-inner {
+    padding: 16px 24px;
+}
+
+.section + .section {
+    margin-top: 20px;
+}

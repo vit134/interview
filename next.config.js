@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const cssLoaderConfig = require('@zeit/next-css/css-loader-config');
 const withLess = require('@zeit/next-less');
 const path = require('path');
@@ -57,13 +59,13 @@ module.exports = withLess({
     });
 
     config.module.rules.push({
-        test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
-        loader: 'url-loader',
-        options: {
-          limit: 8192,
-          esModule: false
-        },
-      },)
+      test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
+      loader: 'url-loader',
+      options: {
+        limit: 8192,
+        esModule: false,
+      },
+    });
 
     /* eslint-disable dot-notation */
     config.resolve.alias['components'] = path.join(__dirname, 'src/components');
@@ -74,5 +76,5 @@ module.exports = withLess({
     /* eslint-enable dot-notation */
 
     return config;
-  }
+  },
 });
