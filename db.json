@@ -18,7 +18,7 @@
         "first_name": "Александр",
         "middle_name": null,
         "photo": 385,
-        "photo_url": "https://store.huntflow.ru/uploads/5/7/0/5700c66c07a23f2e80a0acc0bc3ef6c8.jpeg",
+        "photo_url": "https://i.pravatar.cc/300",
         "email": "hello@mail.ru",
         "tags": [],
         "company": "Save Factory",
@@ -53,7 +53,7 @@
         "first_name": "Виталий",
         "middle_name": "Иванович",
         "photo": 384,
-        "photo_url": "https://store.huntflow.ru/uploads/5/7/0/5700c66c07a23f2e80a0acc0bc3ef6c8.jpeg",
+        "photo_url": "https://i.pravatar.cc/300",
         "email": "test@mail.ru",
         "tags": [
           {
