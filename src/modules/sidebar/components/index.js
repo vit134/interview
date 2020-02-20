@@ -31,6 +31,7 @@ export const Sidebar = ({ questions }) => {
                                 questionType.questions.map((question, ind) => {
                                     return (
                                         <Menu.Item key={ind + 1}>
+                                            <a href={`#question_${question.id}`}></a>
                                             {question.title}
                                             {
                                                 question.checkedAnswer && (

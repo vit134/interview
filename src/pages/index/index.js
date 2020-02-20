@@ -1,0 +1,1 @@
+export { ApplicantsContainer } from './containers';

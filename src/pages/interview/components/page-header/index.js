@@ -2,6 +2,7 @@ import React from 'react';
 import {
   PageHeader as AntPageHeader, Typography, Row, Icon,
 } from 'antd';
+import { getFullName } from '../../../../helpers';
 import styles from './styles.module.css';
 
 const { Paragraph } = Typography;
@@ -13,8 +14,8 @@ const IconLink = ({ iconType, text }) => (
   </a>
 );
 
-export const PageHeader = ({ info }) => {
-  const { name } = info;
+export const PageHeader = ({ applicantInfo }) => {
+  const name = getFullName(applicantInfo);
   return (
     <AntPageHeader
       className={styles['page-header']}

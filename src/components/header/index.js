@@ -1,20 +1,25 @@
 import React from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { Layout, Menu } from 'antd';
 import styles from './styles.module.css';
 
-export const Header = () => (
-  <Layout.Header className={styles.header}>
-    <div className={styles['header-inner']}>
-      <span className={styles.logo}>Interview</span>
-      <Menu
-        className={styles.menu}
-        mode="horizontal"
-        defaultSelectedKeys={['2']}
-      >
-        <Menu.Item key="1">nav 1</Menu.Item>
-        <Menu.Item key="2">nav 2</Menu.Item>
-        <Menu.Item key="3">nav 3</Menu.Item>
-      </Menu>
-    </div>
-  </Layout.Header>
-);
+export const Header = () => {
+    const router = useRouter();
+    const { pathname } = router;
+
+    return (
+        <div className={styles['header']}>
+        <span className={styles.logo}>Interview</span>
+        {/* <Menu
+            className={styles.menu}
+            mode="horizontal"
+            defaultSelectedKeys={[pathname || '/']}
+        >
+            <Menu.Item key="/"><Link href="/">Главная</Link></Menu.Item>
+            <Menu.Item key="/interview"><Link href="/interview">Интервью</Link></Menu.Item>
+        </Menu> */}
+        </div>
+    );
+};
+

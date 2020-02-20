@@ -4,6 +4,8 @@ import withRedux from 'next-redux-wrapper';
 import { Provider } from 'react-redux';
 import initializeStore from '../src/store';
 
+import { Layout } from '../src/components/layout';
+
 class MyApp extends App {
   static async getInitialProps(props) {
     const { Component, ctx } = props;
@@ -16,7 +18,9 @@ class MyApp extends App {
     const { Component, pageProps, store } = this.props;
     return (
       <Provider store={store}>
-        <Component {...pageProps} />
+            <Layout>
+                <Component {...pageProps} />
+            </Layout>
       </Provider>
     );
   }
@@ -24,5 +28,5 @@ class MyApp extends App {
 
 export default withRedux(initializeStore, {
   storeKey: 'Interview',
-  debug: true,
+  debug: false,
 })(MyApp);
